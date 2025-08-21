@@ -1,0 +1,92 @@
+[
+  {
+    "SOURCE": "ECS",
+    "DOC_NO": "ADS000402860",
+    "DOC_DATE": "2025-06-02",
+    "CR_DATE": "2025-06-03 10:56:26",
+    "UP_DATE": null,
+    "Actual_Error": "740-Duplicate IRN",
+    "Cond": "G",
+    "Count": 1
+  },
+  {
+    "SOURCE": "ECS",
+    "DOC_NO": "ADS000402861",
+    "DOC_DATE": "2025-06-02",
+    "CR_DATE": "2025-06-02 11:35:00",
+    "UP_DATE": "2025-06-02 11:35:01",
+    "Actual_Error": null,
+    "Cond": "G",
+    "Count": 1
+  },
+  {
+    "SOURCE": "ECS",
+    "DOC_NO": "ADS000402862",
+    "DOC_DATE": "2025-06-02",
+    "CR_DATE": "2025-06-02 11:35:01",
+    "UP_DATE": "2025-06-02 11:35:01",
+    "Actual_Error": null,
+    "Cond": "G",
+    "Count": 1
+  },
+  {
+    "SOURCE": "ECS",
+    "DOC_NO": "ADS000402863",
+    "DOC_DATE": "2025-06-02",
+    "CR_DATE": "2025-06-02 11:35:01",
+    "UP_DATE": "2025-06-02 11:35:01",
+    "Actual_Error": null,
+    "Cond": "G",
+    "Count": 1
+  },
+  {
+    "SOURCE": "ECS",
+    "DOC_NO": "ADS000402864",
+    "DOC_DATE": "2025-06-02",
+    "CR_DATE": "2025-06-02 11:35:01",
+    "UP_DATE": "2025-06-02 11:35:01",
+    "Actual_Error": null,
+    "Cond": "G",
+    "Count": 1
+  },
+  {
+    "SOURCE": "ECS",
+    "DOC_NO": "ADS000402865",
+    "DOC_DATE": "2025-06-02",
+    "CR_DATE": "2025-06-02 11:35:01",
+    "UP_DATE": "2025-06-02 11:35:01",
+    "Actual_Error": null,
+    "Cond": "G",
+    "Count": 1
+  },
+  {
+    "SOURCE": "ECS",
+    "DOC_NO": "ADS000402866",
+    "DOC_DATE": "2025-06-02",
+    "CR_DATE": "2025-06-02 11:35:01",
+    "UP_DATE": "2025-06-02 11:35:01",
+    "Actual_Error": null,
+    "Cond": "R",
+    "Count": 1
+  },
+  {
+    "SOURCE": "ECS",
+    "DOC_NO": "ADS000402867",
+    "DOC_DATE": "2025-06-02",
+    "CR_DATE": "2025-06-02 11:35:01",
+    "UP_DATE": "2025-06-02 11:35:01",
+    "Actual_Error": null,
+    "Cond": "R",
+    "Count": 1
+  },
+  {
+    "SOURCE": "ECS",
+    "DOC_NO": "ADS000402868",
+    "DOC_DATE": "2025-06-02",
+    "CR_DATE": "2025-06-02 11:35:01",
+    "UP_DATE": "2025-06-02 11:35:01",
+    "Actual_Error": null,
+    "Cond": "D",
+    "Count": 1
+  }
+]

@@ -1,0 +1,28 @@
+[
+  {
+    "INVO_CUST_CCAT_ID": "EDL",
+    "INVO_CUST_ID": "8153",
+    "INVO_CONS_CCAT_ID": "EDL",
+    "INVO_CONS_ID": "8153",
+    "INVO_NO": "81690",
+    "INVO_DATE": "19-03-2025 14:49:51",
+    "INVO_INVT_TYPE": "NED",
+    "INVO_EXCISE_INV_NO": "64511000213",
+    "INVO_DESTINATION": "CONS",
+    "INVO_TOTAL_VALUE": 100.00,
+    "INVO_STATUS": "Completed"
+  },
+  {
+    "INVO_CUST_CCAT_ID": "EDL",
+    "INVO_CUST_ID": "8097",
+    "INVO_CONS_CCAT_ID": "EDL",
+    "INVO_CONS_ID": "8097",
+    "INVO_NO": "81943",
+    "INVO_DATE": "18-03-2025 19:19:12",
+    "INVO_INVT_TYPE": "NEI",
+    "INVO_EXCISE_INV_NO": "64721001395",
+    "INVO_DESTINATION": "CONS",
+    "INVO_TOTAL_VALUE": 200.00,
+    "INVO_STATUS": "Completed"
+  }
+]

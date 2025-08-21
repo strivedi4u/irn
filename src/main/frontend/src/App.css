@@ -1,0 +1,499 @@
+/* General styles */
+body {
+  font-family: 'Montserrat', 'Inter', 'Segoe UI', 'Roboto', Arial, sans-serif !important;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f9;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+.App,
+.App-header,
+.sidebar,
+.sidebar-title,
+.sidebar-link,
+.navbar,
+.navbar-left,
+.navbar-brand,
+.navbar-link,
+.navbar-actions,
+.filter-panel,
+.filter-panel h3,
+.filter-panel label,
+.filter-panel select,
+.filter-dropdown,
+.filter-dropdown label,
+.filter-dropdown select,
+.filter-dropdown input,
+.main-content,
+.monitoring-page,
+.card,
+.card h2,
+.charts-container,
+.chart-card,
+.chart-card h3,
+.charts,
+.data-table,
+.data-table th,
+.data-table td,
+.table-container {
+  font-family: 'Montserrat', 'Inter', 'Segoe UI', 'Roboto', Arial, sans-serif !important;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+.App {
+  display: flex;
+  height: 100vh;
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+/* Sidebar styles */
+.sidebar {
+  width: 250px;
+  background-color: #34495e;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  transition: transform 0.3s ease-in-out;
+  margin-top: 4rem; /* Push sidebar below the navbar */
+  position: fixed;
+  height: calc(100% - 4rem);
+  overflow-y: auto;
+}
+
+.sidebar.closed {
+  transform: translateX(-100%);
+}
+
+.sidebar.open {
+  transform: translateX(0);
+}
+
+.close-sidebar {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  align-self: flex-end;
+  margin-bottom: 1rem;
+}
+
+.filter-sidebar {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  align-self: flex-end;
+  margin-bottom: 1rem;
+}
+
+.sidebar-title {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-link {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  padding: 0.5rem 1rem;
+  margin-bottom: 0.5rem;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: background-color 0.3s;
+}
+
+.sidebar-link:hover {
+  background-color: #4caf50;
+}
+
+.sidebar-icon {
+  font-size: 1.5rem;
+}
+
+/* Navbar styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #2c3e50;
+  color: white;
+  padding: 1rem 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  width: 100%;
+  position: fixed;
+  top: 0;
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+}
+
+.menu-icon {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  margin-right: 1rem;
+}
+
+.navbar-icon {
+  font-size: 1.5rem;
+  margin-right: 1rem;
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.filter-icon {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.navbar-toggle {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.navbar-link {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.navbar-link:hover {
+  color: #4caf50;
+  transform: scale(1.1);
+}
+
+.active-link {
+  color: #4caf50;
+  font-weight: bold;
+}
+
+.navbar-actions {
+  position: relative;
+}
+
+/* Filter Panel styles */
+.filter-panel {
+  position: fixed;
+  top: 4rem;
+  right: 1rem;
+  background-color: white;
+  color: black;
+  padding: 1rem;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  width: 300px;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.filter-panel h3 {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.filter-panel label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.filter-panel select {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.filter-dropdown {
+  position: absolute;
+  top: 2.5rem;
+  right: 0;
+  background-color: white;
+  color: black;
+  padding: 1rem;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.filter-dropdown label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.filter-dropdown select,
+.filter-dropdown input {
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+/* Main content styles */
+.main-content {
+  flex: 1;
+  padding: 2rem;
+  margin-left: 250px; /* Leave space for the sidebar */
+  margin-top: 4rem; /* Leave space for the navbar */
+  overflow-y: auto;
+  transition: margin-left 0.3s ease-in-out;
+}
+
+.sidebar.closed + .main-content {
+  margin-left: 0; /* Adjust content when sidebar is closed */
+}
+
+.monitoring-page {
+  text-align: center;
+}
+
+.card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.card h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Chart container styles */
+.charts-container {
+  display: flex;
+  flex-direction: row; /* Align charts horizontally */
+  justify-content: flex-start; /* Align charts to the left */
+  gap: 2rem; /* Add spacing between charts */
+  margin-top: 2rem;
+  overflow-x: auto; /* Enable horizontal scrolling for smaller screens */
+  padding-bottom: 1rem; /* Add padding for better scroll visibility */
+}
+
+.chart-card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  flex-shrink: 0; /* Prevent charts from shrinking */
+}
+
+.chart-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: #34495e;
+}
+
+.chart-card canvas {
+  max-width: 100%;
+  height: auto;
+}
+
+.charts {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.charts canvas {
+  max-width: 400px; /* Limit the width of each chart */
+  max-height: 300px; /* Limit the height of each chart */
+  width: 100%; /* Ensure charts are responsive */
+  height: auto;
+}
+
+/* Table container styles */
+.table-container {
+  margin-top: 2rem;
+  overflow-x: auto;
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.data-table th, .data-table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+
+.data-table th {
+  background-color: #4caf50;
+  color: white;
+}
+
+.data-table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.data-table tr:hover {
+  background-color: #ddd;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar-links {
+    display: none;
+  }
+
+  .nav-button {
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+  }
+
+  .charts-container {
+    overflow-x: auto; /* Ensure horizontal scrolling on smaller screens */
+  }
+
+  .chart-card {
+    max-width: 300px; /* Reduce chart size for smaller screens */
+  }
+
+  .charts-container {
+    flex-direction: column; /* Stack charts vertically on smaller screens */
+    align-items: center;
+  }
+
+  .chart-card {
+    max-width: 90%;
+  }
+
+  .charts {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .charts canvas {
+    max-width: 300px; /* Reduce chart size for smaller screens */
+    max-height: 250px;
+  }
+
+  .sidebar {
+    position: absolute;
+    height: 100%;
+    z-index: 999;
+  }
+
+  .main-content {
+    margin-left: 0;
+  }
+
+  .sidebar-link {
+    font-size: 1rem;
+  }
+
+  .data-table {
+    font-size: 0.9rem;
+  }
+
+  .main-content {
+    padding: 1rem;
+    margin-left: 0;
+  }
+}
+
+@media (min-width: 769px) {
+  .navbar {
+    flex-direction: row;
+  }
+
+  .charts {
+    flex-direction: row;
+  }
+}

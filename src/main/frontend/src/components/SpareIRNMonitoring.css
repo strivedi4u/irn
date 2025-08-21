@@ -1,0 +1,99 @@
+.monitoring-page {
+  padding: 16px;
+  background: #f9f9f9;
+}
+
+.charts-row {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+.doughnut-chart-container {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  width: 400px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.doughnut-chart-container:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+.chart-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.doughnut-chart-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.doughnut-chart {
+  width: 180px;
+  height: 180px;
+}
+
+.doughnut-chart-details {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.chart-detail {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.chart-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+/* Animation for the doughnut chart */
+@keyframes doughnutChartAnimation {
+  0% {
+    transform: scale(0.9);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* .doughnut-chart {
+  animation: doughnutChartAnimation 1.2s ease-in-out infinite;
+} */
+
+/* Detailed information styling */
+.doughnut-chart-details {
+  background: #f0f0f0;
+  padding: 12px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.chart-detail {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.chart-dot {
+  width: 10px;
+  height: 10px;
+}
